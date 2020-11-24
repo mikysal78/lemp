@@ -23,4 +23,5 @@ dependencies:
   - hanxhx.mysql
   - geerlingguy.certbot
   - src: https://github.com/thefinn93/ansible-letsencrypt
+    name: thefinn93
     version: origin/master
