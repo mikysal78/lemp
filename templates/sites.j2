@@ -1,0 +1,31 @@
+# {{ ansible_managed }}
+
+server {
+        listen       80;
+	listen       [::]:80;
+
+        server_name  {{ item }} www.{{ item }};
+
+        root /var/www/sites/{{ item }};
+
+        index index.php index.html index.htm;
+ 
+	client_max_body_size 20M;
+ 
+        ## Default log and error files.
+        access_log /var/log/nginx/{{ item }}_access.log;
+        error_log /var/log/nginx/{{ item }}_error.log;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	location ~ \.php$ {
+		include snippets/fastcgi-php.conf;
+		fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+		fastcgi_buffers 16 16k; 
+                fastcgi_buffer_size 32k;
+	}
+
+        include snippets/phpmyadmin.conf;
+}
