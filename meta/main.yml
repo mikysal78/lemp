@@ -22,6 +22,4 @@ galaxy_info:
 dependencies:
   - hanxhx.mysql
   - geerlingguy.certbot
-  - src: https://github.com/thefinn93/ansible-letsencrypt
-    name: letsencrypt
-    version: origin/master
+  - thefinn93.letsencrypt
