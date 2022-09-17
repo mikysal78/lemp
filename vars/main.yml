@@ -1,7 +1,7 @@
 ---
 packages:
   - git
-  - python-simplejson
+  - python3-simplejson
   - aptitude
   - atool
   - atop
@@ -54,4 +54,4 @@ packages:
   - mariadb-client
   - mariadb-common
   - mariadb-server
-  - python-mysqldb
+  - python3-mysqldb
