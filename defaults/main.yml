@@ -22,7 +22,7 @@ apps:
 
 
 ### PHP
-path_php_config: /etc/php/7.3/
+path_php_config: /etc/php/7.4/
 php_memory_limit: 128M
 php_max_execution_time: 60
 php_post_max_size: 20M
