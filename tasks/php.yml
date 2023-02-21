@@ -34,4 +34,4 @@
   raw: service nginx restart
 
 - name: PHP | restart fpm
-  raw: service php7.3-fpm restart
+  raw: service php7.4-fpm restart
