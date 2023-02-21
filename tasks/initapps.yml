@@ -50,6 +50,10 @@
   with_items: "{{ apps }}"
   register: sitesdirscreated
 
+- name: create log files
+  file: path=/var/log/nginx/{{ item }}_access.log state=touch owner={{ username }} group={{ groupname }} mode=0664
+  file: path=/var/log/nginx/{{ item }}_error.lo state=touch owner={{ username }} group={{ groupname }} mode=0664
+
 - name: Copy default index.html file
   template:
     src: index.html.j2
