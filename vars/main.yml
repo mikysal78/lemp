@@ -43,7 +43,7 @@ packages:
   - memcached
   - php-memcache
   - php-imagick
-  - php-gettext
+  - php-php-gettext
   - php7.4-zip
   - php7.4-mbstring
   - php7.4-soap
