@@ -50,21 +50,21 @@
   with_items: "{{ apps }}"
   register: sitesdirscreated
 
-- name: Create web logs access (sites)
-  file:
-    group: "{{ groupname }}"
-    owner: "{{ username }}"
-    mode: 664
-    state: touch
-    path:  "/var/log/nginx/{{ item }}_access.log"
-
-- name: Create web logs error (sites)
-  file:
-    group: "{{ groupname }}"
-    owner: "{{ username }}"
-    mode: 664
-    state: touch
-    path:  "/var/log/nginx/{{ item }}_error.log"
+#- name: Create web logs access (sites)
+#  file:
+#    group: "{{ groupname }}"
+#    owner: "{{ username }}"
+#    mode: 664
+#    state: touch
+#    path:  "/var/log/nginx/{{ item }}_access.log"
+#
+#- name: Create web logs error (sites)
+#  file:
+#    group: "{{ groupname }}"
+#    owner: "{{ username }}"
+#    mode: 664
+#    state: touch
+#    path:  "/var/log/nginx/{{ item }}_error.log"
 
 - name: Copy default index.html file
   template:
