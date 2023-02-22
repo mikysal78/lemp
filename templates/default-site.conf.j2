@@ -1,7 +1,6 @@
 # {{ ansible_managed }}
 
-http {
-  server {
+server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 	root /var/www/html;
@@ -26,5 +25,4 @@ http {
 		deny all;
 	}
 	#include snippets/phpmyadmin.conf;
-  }
 }
