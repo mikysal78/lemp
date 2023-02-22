@@ -1,7 +1,6 @@
 # {{ ansible_managed }}
 
-http {
-  server {
+server {
         listen       80;
 	listen       [::]:80;
 
@@ -29,5 +28,4 @@ http {
 	}
 
         #include snippets/phpmyadmin.conf;
-  }
 }
